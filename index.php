@@ -1,18 +1,8 @@
 <?php
-$file = file_get_contents("convenzione.html");
-
-$terms = array(
-    ["keyword" => "{{nome_azienda}}", "value" => "Rossotech Srl"],
-    ["keyword" => "{{sede_legale}}", "value" => "Rossotech Srl"],
-    ["keyword" => "{{codice_fiscale_partita_iva}}", "value" => "Rossotech Srl"],
-    ["keyword" => "{{ceo_nome}}", "value" => "Rossotech Srl"],
-    ["keyword" => "{{ceo_luogo_nascita}}", "value" => "Rossotech Srl"],
-    ["keyword" => "{{ceo_data_nascita}}", "value" => "Rossotech Srl"],
-);
-
-foreach($terms as $term) {
-    $file = str_replace($term["keyword"], $term["value"], $file);
+try {
+    $conn = new mysqli("5.39.75.103", "pcto-firstcampus", "WIvSENfrva7MKJh4qhdI", "pcto-firstcampus");
+} catch(Exception $e) {
+    die($e);
 }
 
-
-echo $file;
+echo "ok";
