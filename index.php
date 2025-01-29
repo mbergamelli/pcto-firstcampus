@@ -1,16 +1,18 @@
 <?php
-// PHP Data Objects(PDO) Sample Code:
-try {
-    $conn = new PDO("sqlsrv:server = tcp:sql-server-rossotech.database.windows.net,1433; Database = rossotech-azure", "mattia", "Newton10337@");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
+$file = file_get_contents("convenzione.html");
+
+$terms = array(
+    ["keyword" => "{{nome_azienda}}", "value" => "Rossotech Srl"],
+    ["keyword" => "{{sede_legale}}", "value" => "Rossotech Srl"],
+    ["keyword" => "{{codice_fiscale_partita_iva}}", "value" => "Rossotech Srl"],
+    ["keyword" => "{{ceo_nome}}", "value" => "Rossotech Srl"],
+    ["keyword" => "{{ceo_luogo_nascita}}", "value" => "Rossotech Srl"],
+    ["keyword" => "{{ceo_data_nascita}}", "value" => "Rossotech Srl"],
+);
+
+foreach($terms as $term) {
+    $file = str_replace($term["keyword"], $term["value"], $file);
 }
 
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "mattia", "pwd" => "Newton10337@", "Database" => "rossotech-azure", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:sql-server-rossotech.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-?>
+
+echo $file;

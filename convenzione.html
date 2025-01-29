@@ -1,0 +1,452 @@
+<!DOCTYPE HTML>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCTO - Convenzione AZIENDA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        @media print {
+            .no-print, .no-print * {
+                display: none !important;
+            }
+        }
+
+        @page {
+            size: A4;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0px;
+            font-size: 10pt;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: justify;
+        }
+
+        body > div {
+            height: 100%;
+            display: block;
+            position: relative;
+        }
+
+        body > div > div.header {
+            width: 100%;
+            height: 3cm;
+
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding-left: 1cm;
+            padding-right: 1cm;
+
+            background-color: #004977;
+            color: white;
+        }
+
+        body > div > div.body {
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 3cm;
+            padding-left: 1cm;
+            padding-right: 1cm;
+            padding-top: 0.5cm;
+            padding-bottom: 2.5cm;
+        }
+
+        body > div > div.footer {
+            width: 100%;
+            height: 2cm;
+
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-left: 1cm;
+            padding-right: 1cm;
+            padding-top: 0.4cm;
+            padding-bottom: 0.4cm;
+
+            background-color: #004977;
+            color: white;
+            font-size: 7.5pt;
+        }
+
+        .logo {
+            height: 2.6cm;
+            margin-top: 0.2cm;
+            margin-bottom: 0.2cm;
+        }
+
+        h1 { /* Titoli */
+            font-weight: bold;
+            text-align: center;
+            font-size: 14pt;
+        }
+
+        h3 { /* Titoletti congiunzione paragrafi */
+            text-align: center;
+            font-weight: bold;
+            font-size: 10pt;
+        }
+
+        hr.space {
+            color: transparent;
+            height: 15px;
+        }
+
+        .elenco-numerato {
+            margin-left: 10px;
+        }
+
+        .elenco-letterato {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body onload="window.print()">
+<div id="pag1">
+    <div class="header">
+        <div class="row">
+            <div class="col-6">
+                <img src="logo-fondo-blu.png" class="logo">
+            </div>
+            <div class="col-6" style="text-align: end">
+                <button class="btn btn-warning no-print" onclick="window.print()" style="margin-top: 0.5cm;">STAMPA
+                    DOCUMENTO
+                </button>
+                <br><br>
+                <span style="color: red; font-size: 13pt;" class="no-print"><b>ANTEPRIMA DEL TESTO</b> - Stampare per versione corretta</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+        <h1>CONVENZIONE TRA ISTITUZIONE SCOLASTICA E SOGGERRO OSPITANTE</h1>
+
+        <h3>TRA</h3>
+        <p>FONDAZIONE LUIGI CLERICI – ISTITUTO TECNOLOGICO “ALAN TURING”con sede in BERGAMO (BG) Via S. Antonino 8
+            Codice Fiscale 80037690155 d'ora in poi denominato "istituzione scolastica" rappresentato dal/la sig./sig.ra
+            TATIANA GUIDA nato/a a MILANO (MI) il 16/01/1977.
+        </p>
+
+        <h3>E</h3>
+        <p><b>{{nome_azienda}}</b> - con sede legale a <b>{{sede_legale}}</b> Codice Fiscale/Partita Iva <b>{{codice_fiscale_partita_iva}}</b>
+            d’ora in poi denominato “soggetto ospitante” rappresentato da <b>{{ceo_nome}}</b> nato/a <b>{{ceo_luogo_nascita}}</b>
+            il <b>{{ceo_data_nascita}}</b>.
+        </p>
+
+        <hr class="space">
+
+        <h3>PREMESSO CHE</h3>
+        <ol>
+            <li>ai sensi dell’art. 1 D. Lgs. 77/05, l’alternanza costituisce una modalità di realizzazione dei corsi nel
+                secondo ciclo del sistema d’istruzione e formazione, per assicurare ai giovani l’acquisizione di
+                competenze spendibili nel mercato del lavoro;
+            </li>
+            <li>ai sensi della legge 13 luglio 2015 n.107, art.1, commi 33-43, i percorsi di alternanza scuola lavoro,
+                sono organicamente inseriti nel piano triennale dell’offerta formativa dell’istituzione scolastica come
+                parte integrante dei percorsi di istruzione;
+            </li>
+            <li>l’alternanza scuola-lavoro è soggetta all’applicazione del D. Lgs. 9 aprile 2008, n .81 e successive
+                modifiche;
+            </li>
+        </ol>
+
+        <hr class="space">
+
+        <h3>SI CONVIENE QUANTO SEGUE:</h3>
+
+
+        <h3>ART. 1</h3>
+        <p>La Società <b>{{nome_azienda}}</b>, qui di seguito indicata/o anche come il soggetto ospitante, si impegna ad
+            accogliere a titolo gratuito presso le sue strutture n° 1 soggetto in alternanza scuola lavoro su proposta
+            di Fondazione Luigi Clerici –ISTITUO TECNOLOGICO “ALAN TURING”, di seguito indicata/o anche come il
+            "istituzione scolastica".</p>
+
+
+        <h3>ART. 2</h3>
+        <ol>
+            <li>L’accoglimento dello/degli studente/i per i periodi di apprendimento in ambiente lavorativo non
+                costituisce rapporto di lavoro.
+            </li>
+            <li>Ai fini e agli effetti delle disposizioni di cui al D. Lgs. 81/2008, lo studente in alternanza scuola
+                lavoro è equiparato al lavoratore, ex art. 2, comma 1 lettera a) del decreto citato.
+            </li>
+            <li>L’attività di formazione ed orientamento del percorso in alternanza scuola lavoro è congiuntamente
+                progettata e verificata da un docente tutor interno, designato dall’istituzione scolastica, e da un
+                tutor formativo della struttura, indicato dal soggetto ospitante, denominato tutor formativo esterno.
+            </li>
+        </ol>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="col-4" style="border-right: 1px dotted white">Via S. Antonino 8 - 24122 Bergamo<br>Tel. 035 07
+                82 017
+            </div>
+            <div class="col-4" style="text-align: center">C.F. 80037690155<br>P.IVA 07257640156</div>
+            <div class="col-4" style="border-left: 1px dotted white; text-align: end">
+                segreteria.didattica@clerici.lombardia.it<br><b>firstcampusbergamo.it</b></div>
+        </div>
+    </div>
+</div>
+
+<div id="pag2">
+    <div class="header">
+        <img src="logo-fondo-blu.png" class="logo">
+    </div>
+
+    <div class="body">
+        <ol start="4">
+            <li>Per ciascun allievo beneficiario del percorso in alternanza inserito nella struttura ospitante in base
+                alla presente Convenzione è predisposto un percorso formativo personalizzato, che fa parte integrante
+                della presente Convenzione, coerente con il profilo educativo, culturale e professionale dell’indirizzo
+                di studi.
+            </li>
+            <li>La titolarità del percorso, della progettazione formativa e della certificazione delle competenze
+                acquisite è dell’istituzione scolastica.
+            </li>
+            <li>L’accoglimento dello/degli studente/i minorenni per i periodi di apprendimento in situazione lavorativa
+                non fa acquisire agli stessi la qualifica di lavoratore minore di cui alla L. 977/67 e successive
+                modifiche.
+            </li>
+        </ol>
+
+
+        <h3>ART. 3</h3>
+        <p class="elenco-numerato">1. Il docente tutor interno svolge le seguenti funzioni:</p>
+        <ol type="a" class="elenco-letterato">
+            <li>elabora, insieme al tutor esterno, il percorso formativo personalizzato sottoscritto dalle parti
+                coinvolte (scuola, struttura ospitante, studente/soggetti esercenti la potestà genitoriale);
+            </li>
+            <li>assiste e guida lo studente nei percorsi di alternanza e ne verifica, in collaborazione con il tutor
+                esterno, il corretto svolgimento;
+            </li>
+            <li>gestisce le relazioni con il contesto in cui si sviluppa l’esperienza di alternanza scuola lavoro,
+                rapportandosi con il tutor esterno;
+            </li>
+            <li>monitora le attività e affronta le eventuali criticità che dovessero emergere dalle stesse;</li>
+            <li>valuta, comunica e valorizza gli obiettivi raggiunti e le competenze progressivamente sviluppate dallo
+                studente;
+            </li>
+            <li>promuove l’attività di valutazione sull’efficacia e la coerenza del percorso di alternanza, da parte
+                dello studente coinvolto;
+            </li>
+            <li>informa gli organi scolastici preposti (Dirigente Scolastico, Dipartimenti, Collegio dei docenti,
+                Comitato Tecnico Scientifico/Comitato Scientifico) ed aggiorna il Consiglio di classe sullo svolgimento
+                dei percorsi, anche ai fini dell’eventuale riallineamento della classe;
+            </li>
+            <li>assiste il Dirigente Scolastico nella redazione della scheda di valutazione sulle strutture con le quali
+                sono state stipulate le convenzioni per le attività di alternanza, evidenziandone il potenziale
+                formativo e le eventuali difficoltà incontrate nella collaborazione
+            </li>
+        </ol>
+        <p class="elenco-numerato">2. Il tutor formativo esterno svolge le seguenti funzioni:</p>
+        <ol type="a" class="elenco-letterato">
+            <li>collabora con il tutor interno alla progettazione, organizzazione e valutazione dell’esperienza di
+                alternanza;
+            </li>
+            <li>favorisce l’inserimento dello studente nel contesto operativo, lo affianca e lo assiste nel
+                percorso;
+            </li>
+            <li>garantisce l’informazione/formazione dello/i studente/i sui rischi specifici aziendali, nel rispetto
+                delle procedure interne;
+            </li>
+            <li>pianifica ed organizza le attività in base al progetto formativo, coordinandosi anche con altre
+                figure professionali presenti nella struttura ospitante;
+            </li>
+        </ol>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="col-4" style="border-right: 1px dotted white">Via S. Antonino 8 - 24122 Bergamo<br>Tel. 035 07
+                82 017
+            </div>
+            <div class="col-4" style="text-align: center">C.F. 80037690155<br>P.IVA 07257640156</div>
+            <div class="col-4" style="border-left: 1px dotted white; text-align: end">
+                segreteria.didattica@clerici.lombardia.it<br><b>firstcampusbergamo.it</b></div>
+        </div>
+    </div>
+</div>
+
+<div id="pag3">
+    <div class="header">
+        <img src="logo-fondo-blu.png" class="logo">
+    </div>
+
+    <div class="body">
+        <ol type="a" start="4" class="elenco-letterato">
+            <li>coinvolge lo studente nel processo di valutazione dell’esperienza;</li>
+            <li>fornisce all’istituzione scolastica gli elementi concordati per valutare le attività dello studente
+                e l’efficacia del processo formativo
+            </li>
+            <li>coinvolge lo studente nel processo di valutazione dell’esperienza;</li>
+        </ol>
+        <p class="elenco-numerato">3. Le due figure dei tutor condividono i seguenti compiti:</p>
+        <ol type="a" class="elenco-letterato">
+            <li>predisposizione del percorso formativo personalizzato, anche con riguardo alla disciplina della
+                sicurezza e salute nei luoghi di lavoro. In particolare, il docente tutor interno dovrà collaborare col
+                tutor formativo esterno al fine dell’individuazione delle attività richieste dal progetto formativo e
+                delle misure di prevenzione necessarie alla tutela dello studente;
+            </li>
+            <li>controllo della frequenza e dell’attuazione del percorso formativo personalizzato;</li>
+            <li>raccordo tra le esperienze formative in aula e quella in contesto lavorativo;</li>
+            <li>elaborazione di un report sull’esperienza svolta e sulle acquisizioni di ciascun allievo, che concorre
+                alla valutazione e alla certificazione delle competenze da parte del Consiglio di classe;
+            </li>
+            <li>verifica del rispetto da parte dello studente degli obblighi propri di ciascun lavoratore di cui
+                all’art. 20 D. Lgs. 81/2008. In particolare la violazione da parte dello studente degli obblighi
+                richiamati dalla norma citata e dal percorso formativo saranno segnalati dal tutor formativo esterno al
+                docente tutor interno affinché quest’ultimo possa attivare le azioni necessarie.
+            </li>
+        </ol>
+
+
+        <h3>ART. 4</h3>
+        <p class="elenco-numerato">1. Durante lo svolgimento del percorso in alternanza scuola lavoro il/i beneficiario/i del percorso è
+            tenuto/sono tenuti a:</p>
+        <ol type="a" class="elenco-letterato">
+            <li>svolgere le attività previste dal percorso formativo personalizzato;</li>
+            <li>rispettare le norme in materia di igiene, sicurezza e salute sui luoghi di lavoro, nonché tutte le
+                disposizioni, istruzioni, prescrizioni, regolamenti interni, previsti a tale scopo
+            </li>
+            <li>mantenere la necessaria riservatezza per quanto attiene ai dati, informazioni o conoscenze in merito a
+                processi produttivi e prodotti, acquisiti durante lo svolgimento dell’attività formativa in contesto
+                lavorativo;
+            </li>
+            <li>seguire le indicazioni dei tutor e fare riferimento ad essi per qualsiasi esigenza di tipo organizzativo
+                o altre evenienze;
+            </li>
+            <li>rispettare gli obblighi di cui al D.Lgs. 81/2008, art. 20.</li>
+        </ol>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="col-4" style="border-right: 1px dotted white">Via S. Antonino 8 - 24122 Bergamo<br>Tel. 035 07
+                82 017
+            </div>
+            <div class="col-4" style="text-align: center">C.F. 80037690155<br>P.IVA 07257640156</div>
+            <div class="col-4" style="border-left: 1px dotted white; text-align: end">
+                segreteria.didattica@clerici.lombardia.it<br><b>firstcampusbergamo.it</b></div>
+        </div>
+    </div>
+</div>
+
+<div id="pag4">
+    <div class="header">
+        <img src="logo-fondo-blu.png" class="logo">
+    </div>
+
+    <div class="body">
+        <h3>ART. 5</h3>
+        <ol type="1">
+            <li>L’istituzione scolastica assicura il/i beneficiario/i del percorso in alternanza scuola lavoro contro gli infortuni sul lavoro presso l’INAIL, nonché per la responsabilità civile presso compagnie assicurative operanti nel settore. In caso di incidente durante lo svolgimento del percorso il soggetto ospitante si impegna a segnalare l’evento, entro i tempi previsti dalla normativa vigente, agli istituti assicurativi (facendo riferimento al numero della polizza sottoscritta dal soggetto promotore) e, contestualmente, al soggetto promotore.</li>
+            <li>Ai fini dell’applicazione dell’articolo 18 del D. Lgs. 81/2008 il soggetto promotore si fa carico dei seguenti obblighi:
+                <ul>
+                    <li>tener conto delle capacità e delle condizioni della struttura ospitante, in rapporto alla salute e sicurezza degli studenti impegnati nelle attività di alternanza;</li>
+                    <li>informare/formare lo studente in materia di norme relative a igiene, sicurezza e salute sui luoghi di lavoro, con particolare riguardo agli obblighi dello studente ex art. 20 D. Lgs. 81/2008;</li>
+                    <li>designare un tutor interno che sia competente e adeguatamente formato in materia di sicurezza e salute nei luoghi di lavoro o che si avvalga di professionalità adeguate in materia (es. RSPP)</li>
+                </ul>
+            </li>
+        </ol>
+
+
+        <h3>ART. 6</h3>
+        <p>Il soggetto ospitante si impegna a: </p>
+        <ol type="a">
+            <li>garantire al beneficiario/ai beneficiari del percorso, per il tramite del tutor della struttura ospitante, l’assistenza e la formazione necessarie al buon esito dell’attività di alternanza, nonché la dichiarazione delle competenze acquisite nel contesto di lavoro;</li>
+            <li>rispettare le norme antinfortunistiche e di igiene sul lavoro;</li>
+            <li>consentire al tutor del soggetto promotore di contattare il beneficiario/i beneficiari del percorso e il tutor della struttura ospitante per verificare l’andamento della formazione in contesto lavorativo, per coordinare l’intero percorso formativo e per la stesura della relazione finale;</li>
+            <li>informare il soggetto promotore di qualsiasi incidente accada al beneficiario/ai beneficiari;</li>
+            <li>individuare il tutor esterno in un soggetto che sia competente e adeguatamente formato in materia di sicurezza e salute nei luoghi di lavoro o che si avvalga di professionalità adeguate in materia (es. RSPP).</li>
+        </ol>
+
+
+        <h3>ART. 7</h3>
+        <ol type="1">
+            <li>La presente convenzione decorre dalla data sottoindicata e dura fino all’espletamento dell’esperienza definita da ciascun percorso formativo personalizzato presso il soggetto ospitante.</li>
+            <li>È in ogni caso riconosciuta facoltà al soggetto ospitante e al soggetto promotore di risolvere la presente convenzione in caso di violazione degli obblighi in materia di salute e sicurezza nei luoghi di lavoro o del piano formativo personalizzato.</li>
+        </ol>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="col-4" style="border-right: 1px dotted white">Via S. Antonino 8 - 24122 Bergamo<br>Tel. 035 07 82 017</div>
+            <div class="col-4" style="text-align: center">C.F. 80037690155<br>P.IVA 07257640156</div>
+            <div class="col-4" style="border-left: 1px dotted white; text-align: end">segreteria.didattica@clerici.lombardia.it<br><b>firstcampusbergamo.it</b></div>
+        </div>
+    </div>
+</div>
+
+<div id="pag5">
+    <div class="header">
+        <img src="logo-fondo-blu.png" class="logo">
+    </div>
+
+    <div class="body">
+        <hr class="space">
+        <hr class="space">
+
+        <p>Fondazione Luigi Clerici<br>
+            ISTITUTO TECNOLOGICO "ALAN TURING"<br>
+        </p>
+        <div class="row" style="width: 100%">
+            <div class="col-5">
+                PAOLO CESANA<br>
+                <br>
+                <br>
+                <br>
+                __________ [timbro] __________
+            </div>
+            <div class="col">
+                <br>
+                <br>
+                <br>
+                <br>
+                __________ [firma] __________
+            </div>
+        </div>
+
+        <hr class="space">
+        <hr class="space">
+
+        <div class="row" style="width: 100%">
+            <div class="col-5">
+                TITOLARE <b>{{nome_azienda}}</b><br>
+                O suo Delegato<br>
+                <br>
+                <br>
+                <br>
+                __________ [timbro] __________
+            </div>
+            <div class="col">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                __________ [firma] __________
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="col-4" style="border-right: 1px dotted white">Via S. Antonino 8 - 24122 Bergamo<br>Tel. 035 07 82 017</div>
+            <div class="col-4" style="text-align: center">C.F. 80037690155<br>P.IVA 07257640156</div>
+            <div class="col-4" style="border-left: 1px dotted white; text-align: end">segreteria.didattica@clerici.lombardia.it<br><b>firstcampusbergamo.it</b></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
