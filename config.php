@@ -7,3 +7,11 @@ try {
     die($e);
 }
 
+session_start();
+
+if(!isset($_SESSION['user'])) {
+    header("Location: /login/");
+}
+if($_SESSION['user_role'] != "admin" OR $_SESSION['user_role'] != "docente") {
+    header("Location: /login/");
+}
