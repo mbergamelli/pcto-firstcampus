@@ -22,10 +22,10 @@ if(isset($_SESSION['user'])) {
             <span class="fs-4"><b>PCTO Manager</b> LOGIN</span>
         </a>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="select">
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="login" method="post" action="./login.php">
             <ul class="nav nav-pills">
-                <li style="margin-right: 10px"><input type="text" class="form-control" placeholder="Username" name="username" required></li>
-                <li style="margin-right: 10px"><input type="password" class="form-control" placeholder="Password" name="password" required></li>
+                <li style="margin-right: 10px"><input type="text" class="form-control <?php if(isset($_GET['e'])) {echo "is-invalid";}?>" placeholder="Username" name="username" required></li>
+                <li style="margin-right: 10px"><input type="password" class="form-control <?php if(isset($_GET['e'])) {echo "is-invalid";}?>" placeholder="Password" name="password" required></li>
                 <li><button class="btn btn-primary" type="submit">Accedi</button></li>
             </ul>
         </form>
